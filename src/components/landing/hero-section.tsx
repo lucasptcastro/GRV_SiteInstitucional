@@ -79,10 +79,10 @@ export function HeroSection() {
         <h1 className="mt-5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/brand/hero-logotype.png"
+            src="/brand/hero-logotype.svg"
             alt="groves."
-            width={213}
-            height={50}
+            width={161}
+            height={39}
             className="mx-auto h-12 w-auto sm:h-14 md:h-16"
           />
         </h1>
