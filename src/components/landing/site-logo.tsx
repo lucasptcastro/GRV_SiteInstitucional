@@ -7,7 +7,7 @@ interface SiteLogoProps {
 
 export function SiteLogo({ className, variant = "dark" }: SiteLogoProps) {
   const src =
-    variant === "light" ? "/brand/logotype-light.png" : "/brand/logotype.png";
+    variant === "light" ? "/brand/hero-logotype.png" : "/brand/logotype.png";
 
   return (
     // eslint-disable-next-line @next/next/no-img-element

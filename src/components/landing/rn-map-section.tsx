@@ -193,15 +193,18 @@ export function RnMapSection() {
                 className="absolute z-10 -translate-x-1/2 -translate-y-1/2 hover:z-20"
                 style={{ left: `${pin.x}%`, top: `${pin.y}%` }}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={pin.logo}
-                  alt={pin.name}
+                <span
+                  role="img"
+                  aria-label={`${pin.name}, ${pin.city}`}
                   title={`${pin.name} — ${pin.city}`}
-                  width={40}
-                  height={40}
-                  className="size-10 rounded-full border-2 border-white object-cover shadow-md"
-                />
+                  className="relative block size-6"
+                >
+                  <span
+                    aria-hidden
+                    className="animate-ping-slow absolute inset-0 rounded-full bg-[#18CB96]"
+                  />
+                  <span className="relative block size-6 rounded-full border-2 border-white bg-[#18CB96] shadow-md" />
+                </span>
               </div>
             ))}
           </div>

@@ -63,7 +63,15 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button size="sm" asChild>
+          <Button
+            size="sm"
+            asChild
+            className={
+              scrolled
+                ? undefined
+                : "bg-white text-[#083528] hover:bg-white/90"
+            }
+          >
             <Link href="#contato">Entrar em contato</Link>
           </Button>
         </div>

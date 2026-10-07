@@ -2,12 +2,49 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowDown, MessageCircle } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowRight,
+  Globe,
+  MessageCircle,
+  Smartphone,
+  Sparkles,
+  Workflow,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { HERO_LINES } from "@/lib/content";
 import { getContactWhatsApp } from "@/lib/site";
 import { cn } from "@/lib/utils";
+
+import { GlyphField } from "./glyph-field";
+
+const HERO_SERVICES = [
+  {
+    icon: Smartphone,
+    title: "Apps móveis",
+    description:
+      "Publicamos e desenvolvemos aplicativos móveis para a sua empresa.",
+  },
+  {
+    icon: Globe,
+    title: "Websites",
+    description:
+      "Construímos landing pages e sites institucionais para o seu negócio.",
+  },
+  {
+    icon: Sparkles,
+    title: "Sistemas",
+    description:
+      "Desenvolvemos sistemas sob medida para atender às suas necessidades.",
+  },
+  {
+    icon: Workflow,
+    title: "Automações",
+    description:
+      "Automatizamos tarefas manuais para a empresa ganhar performance.",
+  },
+];
 
 export function HeroSection() {
   const [lineIndex, setLineIndex] = useState(0);
@@ -27,79 +64,49 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pt-16"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-x-hidden px-4 pt-24 pb-16"
       style={{ background: "var(--hero-bg)" }}
       aria-label="Apresentação"
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% 0%, oklch(0.748 0.153 166 / 0.22) 0%, transparent 70%)",
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-      />
+      <GlyphField />
 
-      <div className="relative z-10 flex flex-col items-center text-center">
-        <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/70 backdrop-blur-sm">
-          <span className="size-1.5 animate-pulse rounded-full bg-emerald-400" />
-          Rio Grande do Norte
+      <div className="relative z-10 flex w-full flex-col items-center text-center">
+        <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs leading-5 font-medium text-white ring-1 ring-inset ring-white/25">
+          <span className="size-1.5 rounded-full bg-white" />
+          Empresa de Tecnologia
         </div>
 
-        <p
-          className="mb-2 text-base font-medium"
-          style={{ color: "var(--hero-muted)" }}
-        >
-          Empresa de tecnologia
-        </p>
-
-        <h1 className="mb-4">
+        <h1 className="mt-5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/brand/logotype-light.png"
+            src="/brand/hero-logotype.png"
             alt="groves."
             width={213}
-            height={51}
-            className="h-14 w-auto sm:h-16 md:h-20"
+            height={50}
+            className="mx-auto h-12 w-auto sm:h-14 md:h-16"
           />
         </h1>
 
-        <div className="mb-6 flex h-12 items-center justify-center">
-          <p
-            className={cn(
-              "text-xl font-semibold transition-all duration-300 sm:text-2xl md:text-3xl",
-              phase === "in"
-                ? "translate-y-0 opacity-100"
-                : "-translate-y-2 opacity-0",
-            )}
-            style={{ color: "#18CB96" }}
-          >
-            {HERO_LINES[lineIndex]}
-          </p>
-        </div>
-
         <p
-          className="mb-10 max-w-xl text-base leading-relaxed sm:text-lg"
-          style={{ color: "var(--hero-muted)" }}
+          className={cn(
+            "mt-4 max-w-[820px] text-[clamp(28px,8.2vw,40px)] leading-[1.1] font-medium tracking-[-0.01em] text-white transition-all duration-300",
+            phase === "in"
+              ? "translate-y-0 opacity-100"
+              : "-translate-y-2 opacity-0",
+          )}
         >
+          {HERO_LINES[lineIndex]}
+        </p>
+
+        <p className="mx-auto mt-4 max-w-[520px] text-base leading-6 text-white/90">
           Soluções tecnológicas sob medida para atender às necessidades da sua
           empresa de forma eficaz.
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-3">
+        <div className="mx-auto mt-6 flex w-full max-w-[320px] flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:items-center sm:justify-center">
           <Button
-            size="lg"
             asChild
-            className="bg-[#18CB96] text-[#083528] shadow-lg shadow-[#18CB96]/25 hover:bg-[#14b886]"
+            className="h-10 rounded-[10px] bg-white px-4 text-sm font-medium text-black shadow-[0_2px_10px_rgba(8,53,40,0.28)] hover:bg-[#f4f4f4]"
           >
             <Link href="#projetos">
               <ArrowDown className="size-4" />
@@ -107,10 +114,9 @@ export function HeroSection() {
             </Link>
           </Button>
           <Button
-            size="lg"
-            variant="outline"
+            variant="ghost"
             asChild
-            className="border-white/20 bg-white/5 text-white backdrop-blur-sm hover:border-white/30 hover:bg-white/10 hover:text-white"
+            className="h-10 rounded-[10px] bg-transparent px-4 text-sm font-medium text-white ring-1 ring-inset ring-white/30 hover:bg-white/10 hover:text-white hover:ring-white/50"
           >
             <Link
               href={getContactWhatsApp()}
@@ -122,13 +128,35 @@ export function HeroSection() {
             </Link>
           </Button>
         </div>
-      </div>
 
-      <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 opacity-40">
-        <span className="text-xs font-medium tracking-widest text-white uppercase">
-          scroll
-        </span>
-        <div className="h-8 w-px bg-white/40" />
+        <ul className="mt-8 grid w-full max-w-[640px] grid-cols-2 gap-3 text-left">
+          {HERO_SERVICES.map((service) => (
+            <li key={service.title}>
+              <a
+                href="#servicos"
+                className="group flex h-full flex-col rounded-xl bg-[color-mix(in_srgb,white_10%,#18cb96)] p-5 text-white ring-1 ring-inset ring-white/20 transition-colors hover:bg-[color-mix(in_srgb,white_16%,#18cb96)] hover:ring-white/30"
+              >
+                <span className="flex items-center gap-3">
+                  <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-white">
+                    <service.icon className="size-5 text-[#18CB96]" />
+                  </span>
+                  <span className="text-sm font-medium">{service.title}</span>
+                </span>
+                <span className="mt-3 line-clamp-2 text-sm leading-5 text-white/80">
+                  {service.description}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href="#servicos"
+          className="mt-4 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
+        >
+          Ver detalhes dos serviços
+          <ArrowRight className="size-4" />
+        </a>
       </div>
     </section>
   );
