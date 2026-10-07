@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { href: "#servicos", label: "Serviços" },
   { href: "#tecnologias", label: "Tecnologias" },
   { href: "#projetos", label: "Projetos" },
-  { href: "#empresas", label: "Empresas" },
+  { href: "#clientes", label: "Clientes" },
   { href: "#mapa", label: "Mapa" },
   { href: "#contato", label: "Contato" },
 ];
@@ -39,10 +39,7 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" aria-label={`${SITE.name}, início`}>
-          <SiteLogo
-            variant={scrolled ? "dark" : "light"}
-            className="h-7"
-          />
+          <SiteLogo variant={scrolled ? "dark" : "light"} className="h-7" />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -67,9 +64,7 @@ export function SiteHeader() {
             size="sm"
             asChild
             className={
-              scrolled
-                ? undefined
-                : "bg-white text-[#083528] hover:bg-white/90"
+              scrolled ? undefined : "bg-white text-[#083528] hover:bg-white/90"
             }
           >
             <Link href="#contato">Entrar em contato</Link>

@@ -45,7 +45,10 @@ export function ContactSection() {
     const body = encodeURIComponent(
       `Olá, Grove Solutions!\n\nSou ${name} (${email}).\n\n${message}`,
     );
-    window.open(`mailto:${SITE.email}?subject=${subject}&body=${body}`, "_blank");
+    window.open(
+      `mailto:${SITE.email}?subject=${subject}&body=${body}`,
+      "_blank",
+    );
   }
 
   return (
@@ -63,7 +66,9 @@ export function ContactSection() {
           <Reveal delay={100}>
             <div className="flex flex-col gap-6">
               <div>
-                <h3 className="mb-1 text-lg font-semibold">Fale com a Grove</h3>
+                <h3 className="mb-1 text-lg font-semibold">
+                  Fale com a Groves
+                </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   Apps, sites, sistemas e automações. Envie o contexto do
                   projeto e retornamos com o próximo passo.

@@ -12,13 +12,13 @@ const GLOBE_CLIENTS = CLIENTS.map((client) => ({
 export function ClientsSection() {
   return (
     <section
-      id="empresas"
+      id="clientes"
       className="border-b border-border scroll-mt-20 overflow-hidden bg-background px-4 py-24 sm:px-6"
     >
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <SectionHeading
-            label="Empresas"
+            label="Clientes"
             title="Empresas que impulsionamos"
             description="Clientes e parceiros em academias, clubes, imobiliárias, educação e operações."
           />
