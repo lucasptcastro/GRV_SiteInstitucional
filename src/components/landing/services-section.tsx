@@ -46,7 +46,7 @@ const PILLARS = [
   {
     icon: Sparkles,
     title: "Experiência do usuário",
-    description: "Projetos com foco na experiência de quem usa.",
+    description: "Sistemas com foco na experiência de quem usa.",
   },
   {
     icon: Gauge,

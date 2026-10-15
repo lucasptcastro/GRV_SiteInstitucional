@@ -7,6 +7,7 @@ import { ServicesSection } from "@/components/landing/services-section";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteHeader } from "@/components/landing/site-header";
 import { TechMarquee } from "@/components/landing/tech-marquee";
+import { WebsitesSection } from "@/components/landing/websites-section";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getStructuredData } from "@/lib/structured-data";
 
@@ -20,6 +21,7 @@ export default function Home() {
         <ServicesSection />
         <TechMarquee />
         <ProjectsSection />
+        <WebsitesSection />
         <ClientsSection />
         <RnMapSection />
         <ContactSection />

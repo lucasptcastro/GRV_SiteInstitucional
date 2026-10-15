@@ -34,14 +34,14 @@ export function ProjectsSection() {
 
   return (
     <section
-      id="projetos"
+      id="sistemas"
       className="border-b border-border scroll-mt-20 px-4 py-24 sm:px-6"
     >
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <SectionHeading
-            label="Projetos"
-            title="O que já entregamos"
+            label="Sistemas"
+            title="O que já desenvolvemos"
             description="Sistemas em produção, apps publicados e sites conduzidos do requisito ao deploy. As abas avançam sozinhas — clique para fixar um projeto."
           />
         </Reveal>
@@ -54,7 +54,7 @@ export function ProjectsSection() {
           >
             <div
               role="tablist"
-              aria-label="Projetos em destaque"
+              aria-label="Sistemas em destaque"
               className="flex flex-wrap justify-center gap-2"
             >
               {SHOWCASE.map((item, index) => (
@@ -136,7 +136,7 @@ export function ProjectsSection() {
                 )}
               </div>
 
-              <BrowserFrame url={project.previewUrl ?? project.tabLabel}>
+              <BrowserFrame>
                 <div className="relative aspect-[16/10] bg-muted">
                   <Image
                     src={project.thumbnail}
@@ -156,7 +156,7 @@ export function ProjectsSection() {
         {MORE.length > 0 && (
           <div className="mt-28">
             <p className="text-muted-foreground mb-5 text-xs font-semibold uppercase tracking-widest">
-              Mais projetos
+              Mais sistemas
             </p>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {MORE.map((item, index) => (

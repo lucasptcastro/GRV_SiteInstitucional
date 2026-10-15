@@ -108,9 +108,9 @@ export function HeroSection() {
             asChild
             className="h-10 rounded-[10px] bg-white px-4 text-sm font-medium text-black shadow-[0_2px_10px_rgba(8,53,40,0.28)] hover:bg-[#f4f4f4]"
           >
-            <Link href="#projetos">
+            <Link href="#sistemas">
               <ArrowDown className="size-4" />
-              Ver projetos
+              Ver sistemas
             </Link>
           </Button>
           <Button

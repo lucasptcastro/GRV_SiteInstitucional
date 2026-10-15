@@ -206,3 +206,66 @@ export const CLIENTS: Client[] = [
     logo: "/clients/arco.jpg",
   },
 ];
+
+export interface Website {
+  id: string;
+  name: string;
+  url: string;
+  host: string;
+  description: string;
+  tags: string[];
+  thumbnail: string;
+}
+
+export const WEBSITES: Website[] = [
+  {
+    id: "proalbuns",
+    name: "Pro Álbuns",
+    url: "https://www.proalbuns.com.br/",
+    host: "proalbuns.com.br",
+    description:
+      "Loja virtual do laboratório fotográfico de Natal/RN: catálogo de fotolivros, álbuns, porta-retratos e fotoprodutos, com editor online e entrega para todo o Brasil.",
+    tags: ["E-commerce", "Fotografia"],
+    thumbnail: "/sites/proalbuns.png",
+  },
+  {
+    id: "picmimos",
+    name: "Picmimos",
+    url: "https://www.picmimos.com.br/",
+    host: "picmimos.com.br",
+    description:
+      "Loja de fotolivros, quadros e revelações personalizadas, com catálogo por categoria, carrinho, área do cliente e envio das fotos pela nuvem.",
+    tags: ["E-commerce", "Fotografia"],
+    thumbnail: "/sites/picmimos.png",
+  },
+  {
+    id: "fotolivromania",
+    name: "Foto Livro Mania",
+    url: "https://fotolivromania.com.br/",
+    host: "fotolivromania.com.br",
+    description:
+      "Site de fotolivros de viagem nos formatos Essencial e Master, com fluxo de pedido, prévia do álbum antes da impressão e atendimento por WhatsApp.",
+    tags: ["E-commerce", "Fotografia"],
+    thumbnail: "/sites/fotolivromania.png",
+  },
+  {
+    id: "loopmais",
+    name: "Loop+",
+    url: "https://loopmaistv.com.br/",
+    host: "loopmaistv.com.br",
+    description:
+      "Vitrine digital da rede de mídia indoor do RN: apresenta a solução em telas de PDV, planos, vídeo institucional, prova social e blog, com contato direto por WhatsApp.",
+    tags: ["Site institucional", "Mídia indoor"],
+    thumbnail: "/sites/loopmais.png",
+  },
+  {
+    id: "olucaspeixoto",
+    name: "Lucas Peixoto",
+    url: "https://olucaspeixoto.com.br/",
+    host: "olucaspeixoto.com.br",
+    description:
+      "Portfólio pessoal de desenvolvedor frontend feito em Next.js e Tailwind, com vitrine de projetos, linha do tempo de experiência, certificados e contato.",
+    tags: ["Portfólio", "Next.js"],
+    thumbnail: "/sites/olucaspeixoto.png",
+  },
+];

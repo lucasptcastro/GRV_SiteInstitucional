@@ -12,7 +12,8 @@ import { SiteLogo } from "./site-logo";
 const NAV_LINKS = [
   { href: "#servicos", label: "Serviços" },
   { href: "#tecnologias", label: "Tecnologias" },
-  { href: "#projetos", label: "Projetos" },
+  { href: "#sistemas", label: "Sistemas" },
+  { href: "#sites", label: "Sites" },
   { href: "#clientes", label: "Clientes" },
   { href: "#mapa", label: "Mapa" },
   { href: "#contato", label: "Contato" },
