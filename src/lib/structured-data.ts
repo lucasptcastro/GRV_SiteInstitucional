@@ -8,7 +8,7 @@ export function getStructuredData(): Record<string, unknown> {
     url: SITE.url,
     description: SITE.description,
     email: SITE.email,
-    telephone: SITE.phone,
+    telephone: `+${SITE.whatsapp}`,
     areaServed: {
       "@type": "State",
       name: "Rio Grande do Norte",
